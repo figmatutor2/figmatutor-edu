@@ -404,12 +404,16 @@ export default function Home() {
                 <YoutubeIcon className="h-4 w-4" />
               </a>
             </Button>
-            <ContactDialog>
-              <Button size="sm">
+            <Button asChild size="sm">
+              <a
+                href="https://www.figmapedia.co.kr/all/?idx=6"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <MailIcon className="mr-2 h-4 w-4" />
-                문의하기
-              </Button>
-            </ContactDialog>
+                교육신청하기
+              </a>
+            </Button>
           </div>
         </nav>
       </header>
