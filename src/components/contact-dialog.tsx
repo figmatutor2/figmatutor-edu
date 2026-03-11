@@ -13,7 +13,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { supabase } from "@/lib/supabase";
+import { getSupabase } from "@/lib/supabase";
 
 type Status = "idle" | "sending" | "success" | "error";
 
@@ -34,6 +34,8 @@ export function ContactDialog({ children }: { children: React.ReactNode }) {
     const message = formData.get("message") as string;
 
     try {
+      const supabase = getSupabase();
+
       // Supabase가 설정되지 않은 경우 (개발 프리뷰용)
       if (!supabase) {
         console.log("Preview mode - form data:", { name, email, subject, message });

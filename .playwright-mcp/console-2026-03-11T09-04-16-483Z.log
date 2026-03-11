@@ -1,1 +1,46 @@
 [     266ms] [WARNING] Image with src "/profile.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 3718744ms] [ERROR] ./src/components/contact-dialog.tsx:16:1
+Export supabase doesn't exist in target module
+  14 | import { Textarea } from "@/components/ui/textarea";
+  15 | import { Label } from "@/components/ui/label";
+> 16 | import { supabase } from "@/lib/supabase";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  17 |
+  18 | type Status = "idle" | "sending" | "success" | "error";
+  19 |
+
+The export supabase was not found in module [project]/src/lib/supabase.ts [app-client] (ecmascript).
+Did you mean to import getSupabase?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./src/components/contact-dialog.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 3718745ms] [ERROR] ./src/components/contact-dialog.tsx:16:1
+Export supabase doesn't exist in target module
+  14 | import { Textarea } from "@/components/ui/textarea";
+  15 | import { Label } from "@/components/ui/label";
+> 16 | import { supabase } from "@/lib/supabase";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  17 |
+  18 | type Status = "idle" | "sending" | "success" | "error";
+  19 |
+
+The export supabase was not found in module [project]/src/lib/supabase.ts [app-ssr] (ecmascript).
+Did you mean to import getSupabase?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import trace:
+  Server Component:
+    ./src/components/contact-dialog.tsx
+    ./src/app/page.tsx @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:3127
+[ 3723466ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
+[ 3723925ms] [WARNING] Image with src "/profile.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_f3530cac._.js:2297
