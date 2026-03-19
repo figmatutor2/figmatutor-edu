@@ -80,7 +80,7 @@ export function HeroSection() {
         className="gap-1.5 border-white/20 bg-white/10 px-4 py-1.5 text-sm text-white backdrop-blur-sm"
       >
         <SparklesIcon className="h-3.5 w-3.5" />
-        대기업이 선택한 Figma 강사
+        50개+ 기업이 믿고 선택하는 강의
       </Badge>
 
       <h1 className="max-w-4xl text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
