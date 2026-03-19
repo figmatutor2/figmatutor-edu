@@ -86,7 +86,7 @@ export function HeroSection() {
       <h1 className="max-w-4xl text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
         실무에서 바로 쓰는
         <br />
-        Figma 실전 교육
+        AI & Figma 실전 교육
       </h1>
 
       <p className="max-w-2xl text-lg text-white/70 sm:text-xl">
