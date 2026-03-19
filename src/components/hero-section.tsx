@@ -2,7 +2,6 @@
 
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ContactDialog } from "@/components/contact-dialog";
 import { WavyBackground } from "@/components/ui/wavy-background";
 
 /* ── Inline Icons (client component needs its own) ── */
@@ -64,26 +63,6 @@ function ArrowRightIcon({ className }: { className?: string }) {
   );
 }
 
-/* ── Data ── */
-
-const enterpriseClients = [
-  "배달의민족",
-  "현대자동차",
-  "키움증권",
-  "SK텔레콤",
-  "호텔신라",
-  "삼성SDS",
-  "NHN",
-  "NHN ad",
-  "NH투자증권",
-  "카카오 스타일",
-  "데이온 컴퍼니",
-  "버킷 플레이스",
-  "에스티유니타스",
-  "SBS",
-  "NEXON",
-];
-
 /* ── Component ── */
 
 export function HeroSection() {
@@ -111,21 +90,23 @@ export function HeroSection() {
       </h1>
 
       <p className="max-w-2xl text-lg text-white/70 sm:text-xl">
-        10년차 프로덕트 디자이너가 직접 가르치는 실습 중심 Figma 교육.
-        배달의민족, 현대자동차, 삼성SDS 등 15개+ 대기업 출강 경험으로 검증된
+        10년차 프로덕트 디자이너가 직접 가르치는 실습 중심 Figma&AI 교육.
+         <br />
+        50개+ 기업 출강 경험으로 검증된
         커리큘럼을 만나보세요.
       </p>
 
       <div className="flex flex-col gap-4 sm:flex-row">
-        <ContactDialog>
-          <Button
-            size="lg"
-            className="bg-white text-black shadow-lg hover:bg-white/90"
-          >
+        <Button
+          asChild
+          size="lg"
+          className="bg-white text-black shadow-lg hover:bg-white/90"
+        >
+          <a href="https://tally.so/r/ZjJQry" target="_blank" rel="noopener noreferrer">
             <MailIcon className="mr-2 h-5 w-5" />
             교육 문의하기
-          </Button>
-        </ContactDialog>
+          </a>
+        </Button>
         <Button
           asChild
           variant="outline"
@@ -139,22 +120,6 @@ export function HeroSection() {
         </Button>
       </div>
 
-      {/* enterprise logo strip */}
-      <div className="mt-8 w-full max-w-3xl">
-        <p className="mb-4 text-xs font-medium uppercase tracking-widest text-white/40">
-          함께한 기업들
-        </p>
-        <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
-          {enterpriseClients.map((client) => (
-            <span
-              key={client}
-              className="text-sm font-medium text-white/30"
-            >
-              {client}
-            </span>
-          ))}
-        </div>
-      </div>
     </WavyBackground>
   );
 }

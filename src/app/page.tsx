@@ -8,7 +8,6 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import { ContactDialog } from "@/components/contact-dialog";
 import { HeroSection } from "@/components/hero-section";
 import Image from "next/image";
 
@@ -277,7 +276,7 @@ const services = [
     icon: SparklesIcon,
     title: "AI 디자인 교육",
     description:
-      "실무에서 바로 활용할 수 있는 AI 기반 디자인 워크플로우를 교육합니다. AI 도구와 Figma를 결합하여 디자인 생산성을 극대화하는 방법을 배웁니다.",
+      "실무에서 바로 활용할 수 있는 AI 기반 디자인 워크플로우를 교육합니다. Claude code와 같은 AI 도구와 Figma를 결합하여 디자인 생산성을 극대화하는 방법을 배웁니다.",
   },
 ];
 
@@ -287,8 +286,8 @@ const careerHistory = [
     icon: BuildingIcon,
     title: "대기업 & 기업 출강",
     description:
-      "배달의민족, 현대자동차, 삼성SDS, SK텔레콤, NHN, NEXON 등 국내 주요 기업에서 Figma 실무 교육을 진행했습니다. UX/UI 디자이너, 콘텐츠 디자이너, 기획자, 마케터 대상 맞춤 클래스를 운영합니다.",
-    highlights: ["15개+ 대기업 출강", "실무 진행 경험 다수"],
+      "배달의민족 등 국내 주요 기업에서 Figma 실무 교육을 진행했습니다. UX/UI 디자이너, 콘텐츠 디자이너, 기획자, 마케터 대상 맞춤 클래스를 운영합니다.",
+    highlights: ["50개+ 기업 출강", "실무 진행 경험 다수"],
   },
   {
     category: "online",
@@ -395,18 +394,9 @@ export default function Home() {
             </a>
           </div>
           <div className="flex items-center gap-2">
-            <Button asChild size="sm" variant="ghost">
-              <a
-                href="https://www.youtube.com/channel/UCd7KZCoLd9JK_wNuLHQBPOA/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <YoutubeIcon className="h-4 w-4" />
-              </a>
-            </Button>
             <Button asChild size="sm">
               <a
-                href="https://www.figmapedia.co.kr/all/?idx=6"
+                href="https://tally.so/r/ZjJQry"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -482,8 +472,8 @@ export default function Home() {
                   className="hidden h-12 md:block"
                 />
                 <div className="flex flex-col items-center md:items-start">
-                  <span className="text-2xl font-bold">15개+</span>
-                  <span className="text-muted-foreground">대기업 출강</span>
+                  <span className="text-2xl font-bold">50개+</span>
+                  <span className="text-muted-foreground">기업 출강</span>
                 </div>
                 <Separator
                   orientation="vertical"
@@ -675,15 +665,16 @@ export default function Home() {
           </p>
 
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-            <ContactDialog>
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-violet-600 to-fuchsia-500 text-white shadow-lg shadow-violet-500/25 hover:shadow-violet-500/40"
-              >
+            <Button
+              asChild
+              size="lg"
+              className="bg-gradient-to-r from-violet-600 to-fuchsia-500 text-white shadow-lg shadow-violet-500/25 hover:shadow-violet-500/40"
+            >
+              <a href="https://tally.so/r/ZjJQry" target="_blank" rel="noopener noreferrer">
                 <MailIcon className="mr-2 h-5 w-5" />
                 메일 보내기
-              </Button>
-            </ContactDialog>
+              </a>
+            </Button>
             <Button asChild variant="outline" size="lg">
               <a
                 href="https://www.instagram.com/figma_tutor/"
@@ -726,11 +717,14 @@ export default function Home() {
             >
               <YoutubeIcon className="h-5 w-5" />
             </a>
-            <ContactDialog>
-              <button className="transition-colors hover:text-foreground">
-                <MailIcon className="h-5 w-5" />
-              </button>
-            </ContactDialog>
+            <a
+              href="https://tally.so/r/ZjJQry"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-colors hover:text-foreground"
+            >
+              <MailIcon className="h-5 w-5" />
+            </a>
           </div>
           <p className="mt-2">
             &copy; {new Date().getFullYear()} Figma tutor. All rights
